@@ -43,16 +43,12 @@
 
     var boughtList = [];
 
-    service.addItem = function(itemName, itemQuantity) {
-      var item = {
-        name: itemName,
-        quantity: itemQuantity
-      };
+    service.addItem = function(item) {
       boughtList.push(item);
     }
 
     service.removeItem = function(itemIndex) {
-      service.addItem(shoppingList[itemIndex].name,shoppingList[itemIndex].quantity);
+      service.addItem(shoppingList[itemIndex]);
       shoppingList.splice(itemIndex,1);
     };
 
