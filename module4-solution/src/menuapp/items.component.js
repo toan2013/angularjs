@@ -3,7 +3,7 @@
 
   angular.module('Data')
     .component('menuItemList', {
-      templateUrl: 'src/menuapp/templates/menu-items.template.html',
+      templateUrl: 'src/menuapp/templates/menu.items.html',
       bindings: {
         itemlist: '<' // should not use upper case like cammel notation here
                       // since the aangular converts automatically to lower
