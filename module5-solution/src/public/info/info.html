@@ -1,0 +1,20 @@
+<div class="container">
+  <div ng-if="infoCtrl.userInfo===null">
+    <br>
+    <h1>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h1>
+    <br>
+  </div>
+  <div ng-if="infoCtrl.userInfo!=null">
+    <br>
+    <h2>Welcome {{infoCtrl.userInfo.user.firstname}} {{infoCtrl.userInfo.user.lastname}}</h2>
+    <h3>Your Registered Information</h3>
+    First Name:  {{infoCtrl.userInfo.user.firstname}} <br>
+    Last Name:   {{infoCtrl.userInfo.user.lastname}} <br>
+    Email:       {{infoCtrl.userInfo.user.email}} <br>
+    Phone:       {{infoCtrl.userInfo.user.phone}} <br>
+    <h3>Your Favorite Food Item</h3>
+    Name:        {{infoCtrl.userInfo.favorite.name}} <br>
+    Description: {{infoCtrl.userInfo.favorite.description}} <br><br>
+    <img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.userInfo.favorite.short_name}}.jpg" alt="{{infoCtrl.userInfo.favorite.name}}">
+  </div>
+</div>
